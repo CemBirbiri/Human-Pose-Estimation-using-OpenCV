@@ -16,43 +16,24 @@ You can find the Jupyter Notebook of the project on XXX. I will explain all the 
 # Human Pose Estimation using OpenCV
 
 
-### 1- Divide the video into frames using OpenCV.
+### 1- Divide the video into frames using OpenCV
 
-cv2.VideoCapture(video_path) is used to frame the video.
+I used the [cv2.VideoCapture(video_path)](https://docs.opencv.org/3.4/d8/dfe/classcv_1_1VideoCapture.html) to frame the video. There are in totla 1864 frames and you can see some of them below.
 
-```
-import numpy as np
-import cv2
-from matplotlib import pyplot as plt
-import json
+<img width="397" alt="Screenshot 2023-10-02 at 12 21 18" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/6e07e574-1e36-48d9-b62f-0d672bc5c8c7">
+
+### 2- Draw Bounding box of Face
+
+Before implemeting a generic for-loop to apply pose estimation algorithm to each frame, I would like to show you how to use body parts's coordinates to draw bounding boxes.
+
+- Read the JSON file and extract the face key points. There are a total of 70 keypoints for the face.
+- Find the center key point of the face(key point #33).
+- Find the endmost points on the left and right to find the width of the bounding box (keypoints #16 and #0)
+- Find the endmost points on top and bottom to find the height of the bounding box (keypoints #24 and #8).
+- Plot the bounding box of the face.
+
+  <img width="550" alt="Screenshot 2023-10-02 at 12 30 07" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/58f79646-122b-4834-b988-e44cd6fda5c8">
 
 
-def extract_frames(video_path):
-  print('Extracting video frames...')
-  #1. Extract video frames save them as .jpg format
-  #Arguments:
-    # video_path: file path of the video
-  #Return: frames_jpg: list of video frames in .jpg format
 
-  #Read the video using OpenCV
-  capture = cv2.VideoCapture(video_path)
-  frameNr = 0
-  #create a list to save the frames
-  frames_jpg = []
-  while (True):
-    success, image = capture.read()
-    if success:
-      #Save the jpg image in a list
-      frames_jpg.append(image)
-    else:
-      break
-    frameNr = frameNr+1
-    #print(frameNr)
-  capture.release()
-  return frames_jpg
 
-#path of the example video
-video_path = "/content/drive/MyDrive/Prof-Lucile-Sassatelli-project/clip_05.mp4"
-video_frames_jpg = extract_frames(video_path)
-}
-```
