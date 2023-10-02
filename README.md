@@ -63,5 +63,8 @@ The video before human-pose estimation:
 https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/83573816-004e-422a-91a5-cca0db349a13
 
 
+The video after human-pose estimation:
 
-  
+https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/6fa2151a-517d-4ac0-b60f-ec0948968bb5
+
+
