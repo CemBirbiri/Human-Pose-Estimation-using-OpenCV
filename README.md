@@ -9,7 +9,7 @@ The following steps were applied for human pose estimation.
 3. Using the coordinates of body parts, draw bounding boxes for the face and body, and lines for arms and legs for all the frames.
 4. Create an output video using the final frames.
 
-You can find the Jupyter Notebook of the project on [Human-Pose-Estimation-using-OpenCV.ipynb](https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/blob/main/Human_Pose_Estimation_using_OpenCV.ipynb). I will explain all the steps below.
+You can find the Jupyter Notebook of the project on [HPE-using-OpenCV.ipynb]([https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/blob/main/Human_Pose_Estimation_using_OpenCV.ipynb](https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/blob/main/HPE_using_OpenCV.ipynb)). I will explain all the steps below.
 
 # Human Pose Estimation using OpenCV
 
