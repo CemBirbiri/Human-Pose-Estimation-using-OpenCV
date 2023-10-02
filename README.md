@@ -4,7 +4,7 @@ Human Pose estimation is a computer vision task that represents the orientation 
 
 In this project, human pose estimation of people in a video clip was applied to draw bounding boxes of body and face, and lines for legs and arms. A JSON file were created using the [OpenPose algorithm](https://cmu-perceptual-computing-lab.github.io/openpose/web/html/doc/). OpenPose has represented the first real-time multi-person system to jointly detect human body, hand, facial, and foot keypoints (in total 135 keypoints) on single images. It returns a JSON file where the coordinates of face and body parts are given. Using these coordinates one can draw bounding boxes of the face and body as well as lines for legs and arms.
 
-The following steps were applied in this project for human pse estimation.
+The following steps were applied for human pose estimation.
 
 1. Divide the given video into frames using [OpenCV](https://opencv.org/).
 2. Read the JSON file coming from the [OpenPose algorithm](https://cmu-perceptual-computing-lab.github.io/openpose/web/html/doc/) algorithm, and detect the coordinates of face, body, arms and legs.
