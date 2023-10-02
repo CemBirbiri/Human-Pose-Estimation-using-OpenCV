@@ -30,7 +30,7 @@ Before implemeting a generic for-loop to apply pose estimation algorithm to each
 - Find the center key point of the face(key point #33).
 - Find the endmost points on the left and right to find the width of the bounding box (keypoints #16 and #0)
 - Find the endmost points on top and bottom to find the height of the bounding box (keypoints #24 and #8).
-- Plot the bounding box of the face.
+- Draw the bounding box of the face using [cv2.circle()](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html) function.
 
 <img width="668" alt="Screenshot 2023-10-02 at 12 38 47" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/780200c9-d2fc-4965-add9-124db36d4e66">
 
@@ -42,8 +42,26 @@ Before implemeting a generic for-loop to apply pose estimation algorithm to each
 - Find the center key point of the body.
 - Finf the height of the body: The distance between the y-coordinates of the endmost top(#1) and bottom(#8) points.
 - Find the width of the body: The distance between the x-coordinates of the endmost right(#1) and endmost left(#5) points.
-- Plot the bounding box of the body.
+- Draw the bounding box of the body using [cv2.circle()](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html) function.
 
 <img width="808" alt="Screenshot 2023-10-02 at 12 38 31" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/d7c9b224-259f-4a5c-a6ca-e90f6a544df6">
 
+### 4- Draw Lines for Arms and Legs
 
+- Get the index of body parts and calculate the x and y coordinates.
+- Draw the lines for the legs and arms using [cv2.line()](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html) function.
+
+<img width="688" alt="Screenshot 2023-10-02 at 12 46 08" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/eb57a227-c79d-40bf-b037-edf809430c81">
+
+### 5- Create a Pipeline that does all the previous steps to each video frame
+
+- Read all the frames one by one and draw bounding boxes & lines.
+- Create a new video from final frames.
+
+The video before human-pose estimation:
+
+https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/83573816-004e-422a-91a5-cca0db349a13
+
+
+
+  
