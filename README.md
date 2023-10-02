@@ -26,14 +26,24 @@ I used the [cv2.VideoCapture(video_path)](https://docs.opencv.org/3.4/d8/dfe/cla
 
 Before implemeting a generic for-loop to apply pose estimation algorithm to each frame, I would like to show you how to use body parts's coordinates to draw bounding boxes.
 
-- Read the JSON file and extract the face key points. There are a total of 70 keypoints for the face.
+- Read the JSON file and extract the **face key points**. There are a total of 70 keypoints for the face.
 - Find the center key point of the face(key point #33).
 - Find the endmost points on the left and right to find the width of the bounding box (keypoints #16 and #0)
 - Find the endmost points on top and bottom to find the height of the bounding box (keypoints #24 and #8).
 - Plot the bounding box of the face.
 
-  <img width="550" alt="Screenshot 2023-10-02 at 12 30 07" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/58f79646-122b-4834-b988-e44cd6fda5c8">
+<img width="668" alt="Screenshot 2023-10-02 at 12 38 47" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/780200c9-d2fc-4965-add9-124db36d4e66">
 
 
+### 3- Draw Bounding box of Body
+
+
+- Read the JSON file and extract the **body key points**. There are a total of 25 keypoints for the face.
+- Find the center key point of the body.
+- Finf the height of the body: The distance between the y-coordinates of the endmost top(#1) and bottom(#8) points.
+- Find the width of the body: The distance between the x-coordinates of the endmost right(#1) and endmost left(#5) points.
+- Plot the bounding box of the body.
+
+<img width="808" alt="Screenshot 2023-10-02 at 12 38 31" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/d7c9b224-259f-4a5c-a6ca-e90f6a544df6">
 
 
