@@ -28,7 +28,7 @@ Before implementing a generic for-loop to apply a pose estimation algorithm to e
 - Find the center key point of the face(key point #33).
 - Find the endmost points on the left and right to find the width of the bounding box (key points #16 and #0)
 - Find the endmost points on top and bottom to find the height of the bounding box (key points #24 and #8).
-- Draw the bounding box of the face using [cv2.circle()](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html) function.
+- Draw the bounding box of the face using [cv2.rectangle()](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html) function.
 
 <img width="668" alt="Screenshot 2023-10-02 at 12 38 47" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/780200c9-d2fc-4965-add9-124db36d4e66">
 
@@ -40,7 +40,7 @@ Before implementing a generic for-loop to apply a pose estimation algorithm to e
 - Find the center key point of the body.
 - Find the height of the body: The distance between the y-coordinates of the endmost top(#1) and bottom(#8) points.
 - Find the width of the body: The distance between the x-coordinates of the endmost right(#1) and endmost left(#5) points.
-- Draw the bounding box of the body using [cv2.circle()](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html) function.
+- Draw the bounding box of the body using [cv2.rectangle()](https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html) function.
 
 <img width="808" alt="Screenshot 2023-10-02 at 12 38 31" src="https://github.com/CemBirbiri/Human-Pose-Estimation-using-OpenCV/assets/46814542/d7c9b224-259f-4a5c-a6ca-e90f6a544df6">
 
